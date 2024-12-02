@@ -5,11 +5,11 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-public class Main {
+public class SpliteratorMain {
     public static void main(String[] args) {
         String inputString = "Hello, World!";
 
-        Stream<Character> characterStream = StreamSupport.stream(new CharacterSpliterator(inputString), false);
+        Stream<Character> characterStream = StreamSupport.stream(new CharacterSpliterator(inputString), true);
 
         Map<Character, Long> map = characterStream
                 .filter(Character::isLetter)
